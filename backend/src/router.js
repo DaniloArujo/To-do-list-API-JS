@@ -5,7 +5,9 @@ const router = express.Router()
 
 //router.get('/exemplos', (req,res) => {
 
-    //validar, chamar outras funções, pegar o retorno dessas funções, responder o usuário(response)
+    //validar, chamar outras funções, 
+    //pegar o retorno dessas funções, 
+    //responder o usuário(response)
 
 //})
 
