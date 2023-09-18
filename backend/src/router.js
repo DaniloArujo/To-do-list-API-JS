@@ -13,6 +13,7 @@ const router = express.Router()
 
 router.get('/tasks',tasksController.getAll)
 router.post('/tasks',tasksController.createTask)
+router.delete('/tasks/:id',tasksController.deleteTask)
 
 
 

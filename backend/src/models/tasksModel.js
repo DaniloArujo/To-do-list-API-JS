@@ -16,7 +16,7 @@ const createTask = async (task) => {
 }
 
 const deleteTask = async (id) =>{
-    const deletedTask = await connection.execute('DELETE FROM products WHERE id=?'[id])
+    const deletedTask = await connection.execute('DELETE FROM tasks WHERE id = ?',[id])
     return deletedTask
 }
 
