@@ -17,6 +17,7 @@ const createTask = async (task) => {
 
 const deleteTask = async (id) =>{
     const deletedTask = await connection.execute('DELETE FROM tasks WHERE id = ?',[id])
+    console.log(`Deleted task: ${id}`)
     return deletedTask
 }
 
@@ -24,6 +25,7 @@ const updateTask = async (id, task) => {
     const queryUpdate = 'UPDATE tasks SET title = ?, status = ? WHERE id = ?'
     const {title, status} = task
     const updatedTask = await connection.execute(queryUpdate,[title,status,id])
+    console.log(`Task ${id} updated`)
     return updatedTask
 }
 
