@@ -22,7 +22,6 @@ const updateTask = async (request, response) => {
     return response.status(204).json()
 }
 
-
 module.exports = {
     getAll,
     createTask,
