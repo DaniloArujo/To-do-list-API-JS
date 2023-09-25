@@ -17,6 +17,19 @@ const createElement = (tag, innerText = '', innerHTML = '') => {
     return element
 }
 
+const createSelect = () =>{
+    const otpions = `
+        <option value="pendente">Pendente</option>
+        <option value="pendente">Em andamento</option>
+        <option value="pendente">Concluída</option>
+    `
+    const select = createElement('select', '', otpions)
+
+    return select
+}
+
+
+
 const task = {
     id: 1,
     title: 'inscreva-se no canall',
@@ -33,11 +46,15 @@ const createRow = (task) => {
     const tdCreatedAt = createElement('td',created_at)
     const tdStatus = createElement('td')
     const tdActions = createElement('td')
+
+    const select = createSelect()
+
     const editButton = createElement('button','', '<span class="material-symbols-outlined">edit</span>');
     editButton.classList.add('btn-action')
     const deleteButton = createElement('button','', '<span class="material-symbols-outlined">delete</span>');
     deleteButton.classList.add('btn-action')
 
+    tdStatus.appendChild(select)
     tdActions.appendChild(editButton)
     tdActions.appendChild(deleteButton)
 
